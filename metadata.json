@@ -1,0 +1,7 @@
+{
+  "name": "Lumina Crypto Wallet",
+  "description": "A high-fidelity, minimalist crypto wallet featuring secure onboarding, portfolio management, token swaps, and real-time analytics.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

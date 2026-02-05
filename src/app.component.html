@@ -1,0 +1,89 @@
+<div class="min-h-screen bg-[#F2F5F4] dark:bg-stone-950 flex flex-col md:flex-row text-slate-800 dark:text-stone-100 font-sans transition-colors duration-300">
+  
+  <!-- Sidebar Navigation (Desktop) -->
+  @if (showNav()) {
+    <aside class="hidden md:flex flex-col w-64 bg-white dark:bg-stone-900 border-r border-stone-100 dark:border-stone-800 h-screen sticky top-0 z-50 px-6 py-8 transition-colors duration-300">
+      <div class="flex items-center gap-3 mb-12 text-[#059669]">
+        <div class="w-8 h-8 rounded-lg bg-[#059669] text-white flex items-center justify-center shadow-lg shadow-[#059669]/20">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-stone-900 dark:text-white">Lumina</span>
+      </div>
+
+      <nav class="space-y-2 flex-1">
+         <a routerLink="/home" routerLinkActive="bg-[#D1FAE5] text-[#059669] dark:bg-stone-800 dark:text-[#10B981]" class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-[#059669] dark:hover:text-[#10B981] transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+         </a>
+         <a routerLink="/analytics" routerLinkActive="bg-[#D1FAE5] text-[#059669] dark:bg-stone-800 dark:text-[#10B981]" class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-[#059669] dark:hover:text-[#10B981] transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+            Market
+         </a>
+         <a routerLink="/swap" routerLinkActive="bg-[#D1FAE5] text-[#059669] dark:bg-stone-800 dark:text-[#10B981]" class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-[#059669] dark:hover:text-[#10B981] transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+            Swap
+         </a>
+         <a routerLink="/activity" routerLinkActive="bg-[#D1FAE5] text-[#059669] dark:bg-stone-800 dark:text-[#10B981]" class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-[#059669] dark:hover:text-[#10B981] transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            History
+         </a>
+         <a routerLink="/settings" routerLinkActive="bg-[#D1FAE5] text-[#059669] dark:bg-stone-800 dark:text-[#10B981]" class="flex items-center gap-3 px-4 py-3 rounded-xl text-stone-500 dark:text-stone-400 hover:bg-stone-50 dark:hover:bg-stone-800 hover:text-[#059669] dark:hover:text-[#10B981] transition-colors font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.47a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.35a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            Settings
+         </a>
+      </nav>
+
+      <div class="mt-auto pt-6 border-t border-stone-100 dark:border-stone-800">
+         <a routerLink="/settings" class="flex items-center gap-3 px-2 py-2 -mx-2 rounded-xl hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors group cursor-pointer">
+            <img src="https://picsum.photos/100/100" class="w-10 h-10 rounded-full bg-stone-200" alt="Profile">
+            <div class="flex-1 overflow-hidden">
+               <p class="text-sm font-bold text-stone-900 dark:text-stone-200 truncate group-hover:text-[#059669] dark:group-hover:text-[#10B981] transition-colors">Alex Morgan</p>
+               <p class="text-xs text-stone-500 dark:text-stone-400 truncate">alex.morgan@example.com</p>
+            </div>
+            <svg class="text-stone-400 group-hover:text-[#059669] dark:group-hover:text-[#10B981]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+         </a>
+      </div>
+    </aside>
+  }
+
+  <!-- Main Content Area -->
+  <main class="flex-1 overflow-y-auto h-screen no-scrollbar relative w-full">
+    <div class="max-w-7xl mx-auto w-full">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <!-- Bottom Navigation (Mobile) -->
+  @if (showNav()) {
+    <nav class="md:hidden fixed bottom-0 w-full bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-t border-stone-100 dark:border-stone-800 flex justify-around items-center py-3 z-50 pb-safe transition-colors duration-300">
+      
+      <a routerLink="/home" routerLinkActive="text-[#059669] dark:text-[#10B981]" class="flex flex-col items-center gap-1 text-stone-400 dark:text-stone-500 p-2 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span class="text-[10px] font-medium">Home</span>
+      </a>
+
+      <a routerLink="/analytics" routerLinkActive="text-[#059669] dark:text-[#10B981]" class="flex flex-col items-center gap-1 text-stone-400 dark:text-stone-500 p-2 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+        <span class="text-[10px] font-medium">Market</span>
+      </a>
+
+      <a routerLink="/swap" routerLinkActive="text-[#059669] dark:text-[#10B981]" class="flex flex-col items-center gap-1 text-stone-400 dark:text-stone-500 p-2 transition-colors">
+         <div class="bg-[#059669]/10 dark:bg-[#10B981]/20 p-2 rounded-full -mt-6 border-4 border-[#F2F5F4] dark:border-stone-950">
+            <svg class="text-[#059669] dark:text-[#10B981]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+         </div>
+         <span class="text-[10px] font-medium text-[#059669] dark:text-[#10B981]">Swap</span>
+      </a>
+
+      <a routerLink="/activity" routerLinkActive="text-[#059669] dark:text-[#10B981]" class="flex flex-col items-center gap-1 text-stone-400 dark:text-stone-500 p-2 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span class="text-[10px] font-medium">History</span>
+      </a>
+
+      <a routerLink="/settings" routerLinkActive="text-[#059669] dark:text-[#10B981]" class="flex flex-col items-center gap-1 text-stone-400 dark:text-stone-500 p-2 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.47a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.35a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span class="text-[10px] font-medium">Settings</span>
+      </a>
+
+    </nav>
+  }
+</div>
